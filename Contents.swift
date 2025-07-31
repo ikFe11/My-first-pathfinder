@@ -12,7 +12,7 @@ var laberynth = [
 //He puesto paredes para el algoritmo
 let start = (row: 1, col: 1)
 let end = (row: 5, col: 5)
-var yourPos = (row: 1, col: 1)
+var yourPos = start
 typealias Position = (row: Int, col: Int)
 
 
@@ -28,13 +28,12 @@ func esValida( pos: Position,  mapa: [[Int]]) -> Bool {
 
 
 func autoMarker(pos : inout Position, mapa : inout [[Int]])-> [[Int]]{
-    pos.row = 1
-    pos.col = 1
+    pos = start
     mapa[pos.row][pos.col] = 1
     var CheckMark = ""
     var checked = false
     var requirement = 0
-    //print (mapa)
+    print (mapa)
     
     while pos != end{
         
